@@ -3,10 +3,9 @@ import PriceFormatter from "./PriceFormatter";
 interface Props{
     price: number | undefined;
     discount: number | undefined;
-    className?: string;
 }
 
-const PriceView = ({price, discount, className} : Props) => {
+const PriceView = ({price, discount} : Props) => {
   return (
     <div>
        <div className=" flex items-center gap-2">
