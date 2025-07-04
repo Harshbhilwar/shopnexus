@@ -1,6 +1,24 @@
 import { DocumentTextIcon } from "@sanity/icons";
 import { defineArrayMember, defineField, defineType } from "sanity";
 
+export interface Blog {
+  _id: string;
+  _type: string;
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title: string;
+  slug: {
+    current: string;
+  };
+  mainImage: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+  };
+}
+
 export const blogType = defineType({
   name: "blog",
   title: "Blog",
