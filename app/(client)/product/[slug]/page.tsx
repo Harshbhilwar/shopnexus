@@ -47,11 +47,13 @@ const SingleProductPage = async ({
           </div>
         </div>
         <div className="space-y-2 border-t border-b border-gray-200 py-5">
-          <PriceView
+          <div className="text-lg font-bold">
+            <PriceView
             price={product?.price}
             discount={product?.discount}
-            className="text-lg font-bold"
+            
           />
+          </div>
           <p
             className={`px-4 py-1.5 text-sm text-center inline-block font-semibold rounded-lg ${product?.stock === 0 ? "bg-red-100 text-red-600" : "text-green-600 bg-green-100"}`}
           >
