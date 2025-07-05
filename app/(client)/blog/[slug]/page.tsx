@@ -214,13 +214,13 @@ const BlogLeft = async ({ slug }: { slug: string }) => {
       <div className="border border-lightColor p-5 rounded-md mt-10">
         <Title className="text-base">Latest Blogs</Title>
         <div className="space-y-4 mt-4">
-          {blogs?.map((blog: Blog, index: number) => (
+          {blogs?.map((blog, index) => (
             <Link
               href={`/blog/${blog?.slug?.current}`}
               key={index}
               className="flex items-center gap-2 group"
             >
-              {blog?.mainImage && (
+              {blog?.mainImage?.asset && (
                 <Image
                   src={urlFor(blog?.mainImage).url()}
                   alt="blogImage"

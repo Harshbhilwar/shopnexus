@@ -40,6 +40,7 @@ export type Blogcategory = {
   description?: string;
 };
 
+
 export type Blog = {
   _id: string;
   _type: "blog";
@@ -75,7 +76,8 @@ export type Blog = {
   }>;
   publishedAt?: string;
   isLatest?: boolean;
-  body?: Array<{
+  body?: Array<
+  | {
     children?: Array<{
       marks?: Array<string>;
       text?: string;
