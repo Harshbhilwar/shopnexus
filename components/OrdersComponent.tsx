@@ -25,8 +25,9 @@ const OrdersComponent = ({ orders }: { orders: MY_ORDERS_QUERYResult }) => {
   };
   return (
     <>
+    <TooltipProvider>
       <TableBody>
-        <TooltipProvider>
+        
           {orders.map((order) => (
             <Tooltip key={order?.orderNumber}>
               <TooltipTrigger asChild>
@@ -92,8 +93,9 @@ const OrdersComponent = ({ orders }: { orders: MY_ORDERS_QUERYResult }) => {
               </TooltipContent>
             </Tooltip>
           ))}
-        </TooltipProvider>
+        
       </TableBody>
+      </TooltipProvider>
       <OrderDetailDialog
         order={selectedOrder}
         isOpen={!!selectedOrder}

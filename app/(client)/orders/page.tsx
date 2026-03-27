@@ -52,8 +52,9 @@ const OrdersPage = async () => {
                                         <TableHead className="text-center">Action</TableHead>
                                     </TableRow>
                                 </TableHeader>
+                                <OrdersComponent orders={orders}/>
                             </Table>
-                            <OrdersComponent orders={orders}/>
+                            
                             <ScrollBar orientation="horizontal"/>
                         </ScrollArea>
                     </CardContent>
