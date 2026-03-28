@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { Metadata } from "@/actions/createCheckoutSession";
 import stripe from "@/lib/stripe";
 import { backendClient } from "@/sanity/lib/backendClient";
