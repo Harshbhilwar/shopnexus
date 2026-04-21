@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from '@vercel/analytics/react';
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
@@ -14,6 +15,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             },
           }}
         />
+
+        <Analytics />
+
       </body>
     </html>
   );
